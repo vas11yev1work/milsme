@@ -1,0 +1,122 @@
+.products {
+  padding: 60px 0;
+  &__title-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__title {
+    margin-bottom: 32px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px 30px;
+  }
+}
+
+.product {
+  &:nth-child(3n) {
+    .product-description {
+      padding-left: 0 !important;
+      left: auto;
+      right: -30px;
+      padding-right: calc(100% + 30px);
+      .product-description-block {
+        padding-right: 0;
+        padding-left: 30px;
+      }
+    }
+  }
+  .product-description {
+    display: none;
+  }
+  &__close-button {
+    display: none;
+  }
+  &--open {
+    position: relative;
+    z-index: 200;
+    .product__content {
+      z-index: 200;
+    }
+    .product-description {
+      display: block;
+    }
+    .product__open-button {
+      display: none;
+    }
+    .product__close-button {
+      display: flex;
+    }
+  }
+  &__content {
+    position: relative;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    object-fit: cover;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-secondary;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  &__price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 24px;
+  }
+}
+
+.product-description {
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  bottom: -30px;
+  padding-left: calc(100% + 30px);
+  z-index: 100;
+  background-color: $color-white;
+  box-shadow: 7px 7px 30px rgba(0, 0, 0, 0.1);
+  padding-top: 55px;
+}
+
+.product-description-block {
+  width: 400px;
+  padding-right: 30px;
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 8px;
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $color-secondary;
+  }
+}

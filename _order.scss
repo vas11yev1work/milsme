@@ -1,0 +1,47 @@
+.order {
+  padding: 60px 0;
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__image {
+    max-width: 550px;
+  }
+  &__text {
+    max-width: 440px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin: 32px 0;
+  }
+  &__marketplace {
+    display: block;
+    height: 20px;
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      .order__marketplace-path {
+        fill: $color-brand;
+      }
+    }
+  }
+  &__marketplace-image {
+    height: 100%;
+  }
+  &__marketplace-path {
+    transition: 0.3s;
+    fill: $color-divider;
+  }
+}

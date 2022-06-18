@@ -1,0 +1,29 @@
+.creator {
+  padding: 60px 0;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 100px;
+  }
+  &__img {
+    max-width: 670px;
+  }
+  &__desc {
+    margin: 32px 0;
+  }
+  &__desc-item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 19px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
