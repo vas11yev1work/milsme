@@ -3,12 +3,21 @@
   &__content {
     display: grid;
     grid-template-columns: 5fr 2fr;
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 7fr 5fr;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__contact-us {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-right: 100px;
+    @media screen and (max-width: 768px) {
+      padding-right: 0;
+    }
   }
   &__our-contacts {
     display: flex;
@@ -23,6 +32,12 @@
       background-image: url('../assets/feather.svg');
       width: 130px;
       height: 114px;
+      @media screen and (max-width: 992px) {
+        bottom: 50px;
+      }
+      @media screen and (max-width: 768px) {
+        bottom: -50px;
+      }
     }
   }
   &__title {
@@ -43,6 +58,18 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 16px;
     margin-bottom: 24px;
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 40px;
   }
 }
 

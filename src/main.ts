@@ -8,7 +8,8 @@ import './style/reset.scss';
 
 const flicking = new Flicking('.first-screen__gallery', {
   circular: true,
-  horizontal: false
+  horizontal: false,
+  align: 'prev'
 });
 
 flicking.addPlugins(new Pagination({
@@ -19,8 +20,25 @@ flicking.addPlugins(new AutoPlay({
   stopOnHover: true
 }));
 
+const mobileFlicking = new Flicking('.first-screen__mobile-gallery', {
+  circular: true,
+  align: 'prev'
+});
+
+mobileFlicking.addPlugins(new Pagination({
+  type: 'bullet',
+}));
+
+mobileFlicking.addPlugins(new AutoPlay({
+  stopOnHover: true
+}));
+
 document.addEventListener('DOMContentLoaded', () => {
   const products = document.querySelectorAll('.product');
+  const header = document.querySelector('.header');
+  const headerContent = document.querySelector('.header > .container');
+  const headerButton = document.querySelector('.header__mobile-menu-button');
+
   products.forEach(product => {
     const openButton = product.querySelector('.product__open-button');
     const closeButton = product.querySelector('.product__close-button');
@@ -31,5 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeButton) closeButton.addEventListener('click', () => {
       products.forEach(p => p.classList.remove('product--open'));
     })
+  });
+
+  if (headerButton) headerButton.addEventListener('click', () => {
+    if (header) header.classList.toggle('header--open');
+  });
+
+  window.addEventListener('click', (event: MouseEvent) => {
+    if (event && header && headerContent && !headerContent.contains(event.target as Node)) {
+      header.classList.remove('header--open');
+    }
   });
 });

@@ -10,7 +10,7 @@
     <header class="header">
       <div class="container">
         <div class="header__content">
-          <img src="./src/assets/logo.svg" alt="logo">
+          <img src="./src/assets/logo.svg" class="header__logo" alt="logo">
           <ul class="header-menu">
             <li class="header-menu__item">
               <a class="header-menu__link" href="#">О компании</a>
@@ -35,6 +35,30 @@
                 <img src="./src/assets/telegram.svg" class="social-networks__image" alt="telegram">
               </a>
             </div>
+            <button class="header__mobile-menu-button">
+              <img src="./src/assets/menu.svg" alt="menu">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-menu">
+        <div class="container">
+          <div class="mobile-menu__content">
+            <ul class="header-menu header-menu--mobile">
+              <li class="header-menu__item">
+                <a class="header-menu__link" href="#">О компании</a>
+              </li>
+              <li class="header-menu__item">
+                <a class="header-menu__link" href="#">Продукция</a>
+              </li>
+              <li class="header-menu__item">
+                <a class="header-menu__link" href="#">Где заказать?</a>
+              </li>
+              <li class="header-menu__item">
+                <a class="header-menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <a class="mobile-menu__num" href="tel:+79267191297">+7 (926) 719-12-97</a>
           </div>
         </div>
       </div>
@@ -53,11 +77,21 @@
           </div>
           <div class="flicking-viewport vertical first-screen__gallery">
             <div class="flicking-camera">
-              <img src="./src/assets/main-image1.png" alt="image">
-              <img src="./src/assets/main-image1.png" alt="image">
-              <img src="./src/assets/main-image1.png" alt="image">
+              <img src="./src/assets/main-image1.png" class="first-screen__img" alt="image">
+              <img src="./src/assets/main-image1.png" class="first-screen__img" alt="image">
+              <img src="./src/assets/main-image1.png" class="first-screen__img" alt="image">
             </div>
             <div class="flicking-pagination"></div>
+          </div>
+          <div class="first-screen__mobile-gallery-wrap">
+            <div class="flicking-viewport first-screen__mobile-gallery">
+              <div class="flicking-camera">
+                <img src="./src/assets/main-image1.png" class="first-screen__img" alt="image">
+                <img src="./src/assets/main-image1.png" class="first-screen__img" alt="image">
+                <img src="./src/assets/main-image1.png" class="first-screen__img" alt="image">
+              </div>
+              <div class="flicking-pagination"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -65,7 +99,7 @@
     <section class="about">
       <div class="container">
         <div class="about__content">
-          <div class="product-images__images">
+          <div class="product-images">
             <img src="./src/assets/product1.png" class="product-images__img product-images__img--large" alt="product">
             <img src="./src/assets/product2.png" class="product-images__img product-images__img--small" alt="product">
           </div>
@@ -134,10 +168,10 @@
                 <div class="product-description-block">
                   <h4 class="product-description-block__title">Эффекты:</h4>
                   <ul>
-                    <li class="list-item list-item--large">Увлажняет, защищает от негативных факторов окружающей среды</li>
-                    <li class="list-item list-item--large">Является идеальной основой под макияж</li>
-                    <li class="list-item list-item--large">Восстанавливает кожу</li>
-                    <li class="list-item list-item--large">Укрепляет защитный барьер</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Увлажняет, защищает от негативных факторов окружающей среды</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Является идеальной основой под макияж</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Восстанавливает кожу</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Укрепляет защитный барьер</li>
                   </ul>
                 </div>
                 <div class="product-description-block">
@@ -169,10 +203,10 @@
                 <div class="product-description-block">
                   <h4 class="product-description-block__title">Эффекты:</h4>
                   <ul>
-                    <li class="list-item list-item--large">Увлажняет, защищает от негативных факторов окружающей среды</li>
-                    <li class="list-item list-item--large">Является идеальной основой под макияж</li>
-                    <li class="list-item list-item--large">Восстанавливает кожу</li>
-                    <li class="list-item list-item--large">Укрепляет защитный барьер</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Увлажняет, защищает от негативных факторов окружающей среды</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Является идеальной основой под макияж</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Восстанавливает кожу</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Укрепляет защитный барьер</li>
                   </ul>
                 </div>
                 <div class="product-description-block">
@@ -204,10 +238,10 @@
                 <div class="product-description-block">
                   <h4 class="product-description-block__title">Эффекты:</h4>
                   <ul>
-                    <li class="list-item list-item--large">Увлажняет, защищает от негативных факторов окружающей среды</li>
-                    <li class="list-item list-item--large">Является идеальной основой под макияж</li>
-                    <li class="list-item list-item--large">Восстанавливает кожу</li>
-                    <li class="list-item list-item--large">Укрепляет защитный барьер</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Увлажняет, защищает от негативных факторов окружающей среды</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Является идеальной основой под макияж</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Восстанавливает кожу</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Укрепляет защитный барьер</li>
                   </ul>
                 </div>
                 <div class="product-description-block">
@@ -239,10 +273,10 @@
                 <div class="product-description-block">
                   <h4 class="product-description-block__title">Эффекты:</h4>
                   <ul>
-                    <li class="list-item list-item--large">Увлажняет, защищает от негативных факторов окружающей среды</li>
-                    <li class="list-item list-item--large">Является идеальной основой под макияж</li>
-                    <li class="list-item list-item--large">Восстанавливает кожу</li>
-                    <li class="list-item list-item--large">Укрепляет защитный барьер</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Увлажняет, защищает от негативных факторов окружающей среды</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Является идеальной основой под макияж</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Восстанавливает кожу</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Укрепляет защитный барьер</li>
                   </ul>
                 </div>
                 <div class="product-description-block">
@@ -274,10 +308,10 @@
                 <div class="product-description-block">
                   <h4 class="product-description-block__title">Эффекты:</h4>
                   <ul>
-                    <li class="list-item list-item--large">Увлажняет, защищает от негативных факторов окружающей среды</li>
-                    <li class="list-item list-item--large">Является идеальной основой под макияж</li>
-                    <li class="list-item list-item--large">Восстанавливает кожу</li>
-                    <li class="list-item list-item--large">Укрепляет защитный барьер</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Увлажняет, защищает от негативных факторов окружающей среды</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Является идеальной основой под макияж</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Восстанавливает кожу</li>
+                    <li class="list-item list-item--large list-item--delete-mob">Укрепляет защитный барьер</li>
                   </ul>
                 </div>
                 <div class="product-description-block">
@@ -304,7 +338,7 @@
               <p class="creator__desc-item">Вместе с технологами и специалистами индустрии красоты, мы разработали уходовую косметику, исходя из проблем, связанных с кожей, основываясь на инновациях и потребностях клиентов.</p>
             </div>
           </div>
-          <div class="product-images__images product-images__images--reverse">
+          <div class="product-images product-images--reverse">
             <img src="./src/assets/product1.png" class="product-images__img product-images__img--large" alt="product">
             <img src="./src/assets/product2.png" class="product-images__img product-images__img--small" alt="product">
           </div>
@@ -414,24 +448,24 @@
     </section>
     <footer class="footer">
       <div class="container">
-        <div class="header__content">
-          <img src="./src/assets/logo.svg" alt="logo">
-          <ul class="header-menu">
-            <li class="header-menu__item">
-              <a class="header-menu__link" href="#">О компании</a>
+        <div class="footer__content">
+          <img src="./src/assets/logo.svg" class="footer__logo" alt="logo">
+          <ul class="footer-menu">
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">О компании</a>
             </li>
-            <li class="header-menu__item">
-              <a class="header-menu__link" href="#">Продукция</a>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Продукция</a>
             </li>
-            <li class="header-menu__item">
-              <a class="header-menu__link" href="#">Где заказать?</a>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Где заказать?</a>
             </li>
-            <li class="header-menu__item">
-              <a class="header-menu__link" href="#">Контакты</a>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#">Контакты</a>
             </li>
           </ul>
-          <div class="header__contacts">
-            <a class="header__num" href="tel:+79267191297">+7 (926) 719-12-97</a>
+          <div class="footer__contacts">
+            <a class="footer__num" href="tel:+79267191297">+7 (926) 719-12-97</a>
             <div class="social-networks">
               <a href="#" class="social-networks__item social-networks__item--type-instagram">
                 <img src="./src/assets/instagram.svg" class="social-networks__image" alt="instagram">
