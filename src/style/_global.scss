@@ -69,6 +69,7 @@ hr.main-divider {
     font-weight: 400;
     font-size: 14px;
     transition: border 0.3s;
+    border-radius: 0;
     &::placeholder {
       color: #B0B0B0;
     }
